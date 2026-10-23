@@ -1,0 +1,13 @@
+---
+layout: default
+---
+<!--
+  This layout is just a visual marker for pages meant to sit behind
+  Cloudflare Access (build-logs, portal, materials). Access control
+  itself happens at Cloudflare, not here — this page is still plain
+  public HTML until you set that up (see the project README).
+-->
+<div class="gated-page">
+  <p class="gated-page__badge">🔒 Team-only page</p>
+  {{ content }}
+</div>

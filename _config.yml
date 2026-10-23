@@ -1,0 +1,45 @@
+# ── Team-specific settings ────────────────────────────────────
+# This is the ONLY file most teams need to edit to make this their own.
+team_number: "10229"
+team_name: "Tripp Robo"
+title: "Team 10229 — Tripp Robo"
+description: "Official site for FRC Team 10229"
+tagline: "FIRST Robotics Competition Team"
+
+# Public links shown on the homepage link tree
+links:
+  - label: "Scouting App"
+    url: "https://example.com/scouting"      # <-- replace with the real scouting app link
+  - label: "Instagram"
+    url: "https://instagram.com/"
+  - label: "Sponsor Us"
+    url: "/sponsors/"
+  - label: "Contact"
+    url: "mailto:team@example.com"
+
+# Primary brand color (used in assets/css/style.scss)
+brand_color: "#0057B8"
+
+# ── Jekyll settings (most teams won't need to touch these) ─────
+title_separator: "—"
+markdown: kramdown
+theme: minima
+permalink: pretty
+
+collections:
+  build_logs:
+    output: true
+    permalink: /build-logs/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: "build_logs"
+    values:
+      layout: "build-log-entry"
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor

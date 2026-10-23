@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title | default: site.title }}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+  <header class="site-header">
+    <a class="site-header__brand" href="{{ '/' | relative_url }}">
+      {{ site.team_name }} <span>#{{ site.team_number }}</span>
+    </a>
+    <nav class="site-header__nav">
+      <a href="{{ '/' | relative_url }}">Home</a>
+      <a href="{{ '/build-logs/' | relative_url }}">Build Logs</a>
+      <a href="{{ '/portal/' | relative_url }}">Portal</a>
+      <a href="{{ '/materials/' | relative_url }}">Materials</a>
+    </nav>
+  </header>
+
+  <main class="site-main">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <p>Team {{ site.team_number }} — {{ site.team_name }} · Built from the
+      <a href="https://github.com/" target="_blank" rel="noopener">FRC team site template</a>
+    </p>
+  </footer>
+</body>
+</html>
